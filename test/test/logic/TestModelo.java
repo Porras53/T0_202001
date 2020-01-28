@@ -31,23 +31,34 @@ public class TestModelo {
 	@Test
 	public void testDarTamano() {
 		// TODO
+		setUp2();
+		assertEquals(100, modelo.darTamano());
 	}
 
 	@Test
 	public void testAgregar() {
 		// TODO Completar la prueba
+		setUp2();
+		assertEquals(100, modelo.darTamano());
+		modelo.agregar(101);
+		assertEquals(101, modelo.darTamano());
 	}
 
 	@Test
 	public void testBuscar() {
-		setUp2();
 		// TODO Completar la prueba
+		setUp2();
+		assertSame(30, modelo.buscar(30));
+		
 	}
 
 	@Test
 	public void testEliminar() {
 		setUp2();
 		// TODO Completar la prueba
+		assertEquals(100, modelo.darTamano());
+		assertSame(30, modelo.eliminar(30));
+		assertEquals(99, modelo.darTamano());
 		
 	}
 
